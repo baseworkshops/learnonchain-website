@@ -26,7 +26,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "NFT Marketplace Integration",
+    title: "NFT Marketplace",
     description: "A tool for integrating NFT marketplaces with dApps for seamless transactions.",
     image: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=400&auto=format&fit=crop&q=60",
     tags: ["NFTs", "Tools"],
@@ -178,7 +178,7 @@ export default function ProjectGallery() {
               <SelectTrigger className="w-full md:w-[200px] bg-white/5 border-white/10 text-white">
                 <SelectValue placeholder="Category" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="bg-black/80 text-white">
                 {categories.map((category) => (
                   <SelectItem key={category} value={category}>{category}</SelectItem>
                 ))}
@@ -188,7 +188,7 @@ export default function ProjectGallery() {
               <SelectTrigger className="w-full md:w-[200px] bg-white/5 border-white/10 text-white">
                 <SelectValue placeholder="Status" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="bg-black/80 text-white">
                 {statuses.map((status) => (
                   <SelectItem key={status} value={status}>{status}</SelectItem>
                 ))}
@@ -198,7 +198,7 @@ export default function ProjectGallery() {
               <SelectTrigger className="w-full md:w-[200px] bg-white/5 border-white/10 text-white">
                 <SelectValue placeholder="Sort by" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="bg-black/80 text-white">
                 {sortOptions.map((option) => (
                   <SelectItem key={option} value={option}>{option}</SelectItem>
                 ))}

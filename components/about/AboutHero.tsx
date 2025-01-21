@@ -48,7 +48,7 @@ export default function AboutHero() {
           transition={{ duration: 0.8 }}
           className="space-y-6 max-w-4xl mx-auto"
         >
-          <motion.h1 
+          <motion.h1
             className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-teal-400"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,14 +56,15 @@ export default function AboutHero() {
           >
             Building the Future of Onchain Education
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             className="text-xl md:text-2xl text-gray-300"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Empowering communities through accessible and practical blockchain learning
+            Empowering communities through accessible and practical blockchain
+            learning
           </motion.p>
 
           <motion.div
@@ -80,16 +81,15 @@ export default function AboutHero() {
             </Button>
           </motion.div>
         </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <ChevronDown className="w-8 h-8 text-gray-400" />
-        </motion.div>
       </div>
+      {/* Scroll indicator */}
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-28 transform -translate-x-1/2"
+      >
+        <ChevronDown className="w-8 h-8 text-gray-400" />
+      </motion.div>
     </section>
   );
 }

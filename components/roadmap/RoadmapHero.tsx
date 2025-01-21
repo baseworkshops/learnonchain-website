@@ -66,7 +66,7 @@ export default function RoadmapHero() {
               Shaping the Future of Onchain Education
             </h1>
           </motion.div>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -91,16 +91,15 @@ export default function RoadmapHero() {
             </Button>
           </motion.div>
         </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <ChevronDown className="w-8 h-8 text-gray-400" />
-        </motion.div>
       </div>
+      {/* Scroll indicator */}
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-28 transform -translate-x-1/2"
+      >
+        <ChevronDown className="w-8 h-8 text-gray-400" />
+      </motion.div>
     </section>
   );
 }

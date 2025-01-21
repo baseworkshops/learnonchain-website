@@ -66,14 +66,15 @@ export default function ContactHero() {
               We'd Love to Hear From You!
             </h1>
           </motion.div>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-300"
           >
-            Whether you have a question, feedback, or partnership idea, we're here to help
+            Whether you have a question, feedback, or partnership idea, we're
+            here to help
           </motion.p>
 
           <motion.div
@@ -91,16 +92,16 @@ export default function ContactHero() {
             </Button>
           </motion.div>
         </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <ChevronDown className="w-8 h-8 text-gray-400" />
-        </motion.div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-28 transform -translate-x-1/2"
+      >
+        <ChevronDown className="w-8 h-8 text-gray-400" />
+      </motion.div>
     </section>
   );
 }
