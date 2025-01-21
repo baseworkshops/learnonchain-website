@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Award, BookOpen, Calendar, Users, Rocket, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import Logo from "@/public/onchainLearn-logo.png";
 
 const navLinks = [
   { 
@@ -70,15 +72,16 @@ export default function Navbar() {
       aria-label="Main navigation"
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex md:block lg:flex gap-2 items-center justify-between h-20">
           {/* Logo */}
           <Link href="/">
             <motion.div
-              className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-teal-400 bg-clip-text text-transparent"
+              className="flex gap-1 text-2xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-teal-400 bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              LearnOnchain
+          <Image src={Logo} alt="logo" height={100} width={100} className="w-6 h-6 my-auto" />
+              learnOnchain
             </motion.div>
           </Link>
 

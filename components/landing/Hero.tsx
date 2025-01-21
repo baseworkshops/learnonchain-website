@@ -51,7 +51,7 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-28 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-28 transform -translate-x-1/2"
         >
           <ChevronDown className="w-8 h-8 text-gray-400" />
         </motion.div>
