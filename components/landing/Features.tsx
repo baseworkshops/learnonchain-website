@@ -24,7 +24,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 bg-gray-900/50">
+    <section id="features" className="py-24 bg-gray-900/50 text-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export default function Features() {
             >
               <Card className="p-6 bg-gray-800/50 backdrop-blur-lg border-gray-700 hover:bg-gray-800/80 transition-colors">
                 <feature.icon className="w-12 h-12 mb-4 text-blue-400" />
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <h3 className="text-xl text-gray-200 font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>
               </Card>
             </motion.div>

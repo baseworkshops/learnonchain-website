@@ -1,26 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle, Github, Twitter } from "lucide-react";
+import { MessageCircle, Send, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const socialLinks = [
   {
     icon: MessageCircle,
     label: "Discord",
-    href: "#",
+    href: "https://discord.gg/32uuVnv8dy",
     gradient: "from-indigo-500 to-purple-500",
   },
   {
-    icon: Github,
-    label: "GitHub",
-    href: "#",
+    icon: Send,
+    label: "Telegram",
+    href: "https://t.me/onchainlearn",
     gradient: "from-gray-600 to-gray-400",
   },
   {
     icon: Twitter,
     label: "Twitter",
-    href: "#",
+    href: "https://x.com/onchainlearn",
     gradient: "from-blue-400 to-blue-600",
   },
 ];
@@ -116,9 +116,9 @@ export default function Community() {
                       >
                         <Button
                           variant="outline"
-                          className="bg-white/5 border-white/10 hover:border-white/20 space-x-2"
+                          className="bg-white/5 border-white/10 hover:border-white/20 text-white/20 space-x-2"
                         >
-                          <link.icon className={`w-4 h-4 bg-gradient-to-r ${link.gradient} bg-clip-text text-transparent`} />
+                          <link.icon className={`w-4 h-4 bg-gradient-to-r ${link.gradient} bg-clip-text text-transparen`} />
                           <span>{link.label}</span>
                         </Button>
                       </motion.a>
