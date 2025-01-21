@@ -3,44 +3,53 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Award, BookOpen, Calendar, Users, Rocket, MessageCircle } from "lucide-react";
+import {
+  Menu,
+  X,
+  Award,
+  BookOpen,
+  Calendar,
+  Users,
+  Rocket,
+  MessageCircle,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Logo from "@/public/onchainLearn-logo.png";
 
 const navLinks = [
-  { 
+  {
     label: "Home",
     href: "/",
     icon: BookOpen,
   },
-  { 
+  {
     label: "About",
     href: "/about",
     icon: Users,
   },
-  { 
+  {
     label: "Projects",
     href: "/projects",
     icon: Rocket,
   },
-  { 
+  {
     label: "Bounties",
     href: "/bounties",
     icon: Award,
   },
-  { 
+  {
     label: "Events",
     href: "/events",
     icon: Calendar,
   },
-  { 
+  {
     label: "Certificates",
     href: "/certificates",
     icon: Award,
   },
-  { 
+  {
     label: "Contact",
     href: "/contact",
     icon: MessageCircle,
@@ -80,7 +89,13 @@ export default function Navbar() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-          <Image src={Logo} alt="logo" height={100} width={100} className="w-6 h-6 my-auto" />
+              <Image
+                src={Logo}
+                alt="logo"
+                height={100}
+                width={100}
+                className="w-6 h-6 my-auto"
+              />
               learnOnchain
             </motion.div>
           </Link>
@@ -90,42 +105,37 @@ export default function Navbar() {
             {navLinks.map((link, index) => {
               const isActive = pathname === link.href;
               return (
-                <Link 
-                  key={index} 
+                <Link
+                  key={index}
                   href={link.href}
                   aria-current={isActive ? "page" : undefined}
                 >
                   <motion.div
                     className={`relative group cursor-pointer ${
-                      isActive 
-                        ? "text-white" 
-                        : "text-gray-300 hover:text-white"
+                      isActive ? "text-white" : "text-gray-300 hover:text-white"
                     } transition-colors`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <span>{link.label}</span>
-                    <span 
+                    <span
                       className={`absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transform transition-transform ${
-                        isActive 
-                          ? "scale-x-100" 
+                        isActive
+                          ? "scale-x-100"
                           : "scale-x-0 group-hover:scale-x-100"
-                      }`} 
+                      }`}
                     />
                   </motion.div>
                 </Link>
               );
             })}
-            
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-              >
-                Get Started
-              </Button>
+
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link href="https://dashboard.learnonchain.org/">
+                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
+                  Get Started
+                </Button>
+              </Link>
             </motion.div>
           </div>
 
@@ -158,15 +168,15 @@ export default function Navbar() {
                 {navLinks.map((link, index) => {
                   const isActive = pathname === link.href;
                   return (
-                    <Link 
-                      key={index} 
+                    <Link
+                      key={index}
                       href={link.href}
                       aria-current={isActive ? "page" : undefined}
                     >
                       <motion.div
                         className={`flex items-center space-x-2 py-2 ${
-                          isActive 
-                            ? "text-white bg-white/10" 
+                          isActive
+                            ? "text-white bg-white/10"
                             : "text-gray-300 hover:text-white"
                         } transition-colors rounded-lg px-4`}
                         initial={{ x: -20, opacity: 0 }}
@@ -186,11 +196,11 @@ export default function Navbar() {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: navLinks.length * 0.1 }}
                 >
-                  <Button
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-                  >
-                    Get Started
-                  </Button>
+                  <Link href="https://dashboard.learnonchain.org/">
+                    <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
+                      Get Started
+                    </Button>
+                  </Link>
                 </motion.div>
               </div>
             </div>

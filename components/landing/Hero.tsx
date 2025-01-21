@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   const scrollToNextSection = () => {
@@ -29,12 +30,18 @@ export default function Hero() {
             Empowering Communities to Learn and Build Onchain
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Join the movement to bring the next billion users onchain through practical education and innovative solutions.
+            Join the movement to bring the next billion users onchain through
+            practical education and innovative solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
-              Get Started
-            </Button>
+            <Link href="https://dashboard.learnonchain.org/">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+              >
+                Get Started
+              </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"
@@ -45,16 +52,15 @@ export default function Hero() {
             </Button>
           </div>
         </motion.div>
-
       </div>
-        {/* Scroll indicator */}
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-28 transform -translate-x-1/2"
-        >
-          <ChevronDown className="w-8 h-8 text-gray-400" />
-        </motion.div>
+      {/* Scroll indicator */}
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-28 transform -translate-x-1/2"
+      >
+        <ChevronDown className="w-8 h-8 text-gray-400" />
+      </motion.div>
     </section>
   );
 }
