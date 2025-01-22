@@ -16,7 +16,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import Logo from "@/public/onchainLearn-logo.png";
+import Logo from "@/public/images/onchainLearn-logo.png";
 
 const navLinks = [
   {
