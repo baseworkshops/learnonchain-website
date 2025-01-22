@@ -8,7 +8,7 @@ const team = [
     name: "Muhammad Amoo",
     role: "Founder & CEO",
     image: "/images/druxamb.png",
-    bio: "JavaScript dev || base Global builder.",
+    bio: "Software Developer | base Global builder | Enterpreneur.",
     social: {
       twitter: "https://twitter.com/druxamb/",
       linkedin: "https://www.linkedin.com/in/druxamb/",
@@ -17,9 +17,9 @@ const team = [
   },
   {
     name: "Kc Pele",
-    role: "DevRel",
+    role: "Co-Founder & CTO",
     image: "/images/kcpele.png",
-    bio: "Developer Advocate | Software Developer | Volunteer | Mentor.",
+    bio: "Devrel | Developer Advocate | Software Developer | Volunteer | Mentor.",
     social: {
       twitter: "https://twitter.com/kc_pele/",
       linkedin: "https://www.linkedin.com/in/kc-pele-95a665204",
@@ -28,9 +28,9 @@ const team = [
   },
   {
     name: "Ibrahim Amoo",
-    role: "Marketing",
+    role: "Co-Founder & CMO",
     image: "/images/luckywemo.png",
-    bio: "Blockchain dev, Technical project Manager, Marketer.",
+    bio: "Blockchain dev | Technical Project Manager | Marketer.",
     social: {
       twitter: "https://twitter.com/luckywemo/",
       linkedin: "https://ng.linkedin.com/in/amoo-ibrahim-760a931a6",
