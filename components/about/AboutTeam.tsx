@@ -6,7 +6,7 @@ import { Github, Twitter, Linkedin } from "lucide-react";
 const team = [
   {
     name: "Muhammad Amoo",
-    role: "Founder & CEO",
+    role: "Contributor",
     image: "/images/druxamb.png",
     bio: "Software Developer | base Global builder | Enterpreneur.",
     social: {
@@ -17,7 +17,7 @@ const team = [
   },
   {
     name: "Kc Pele",
-    role: "Co-Founder & CTO",
+    role: "Contributor",
     image: "/images/kcpele.png",
     bio: "Devrel | Developer Advocate | Software Developer | Volunteer | Mentor.",
     social: {
@@ -28,7 +28,7 @@ const team = [
   },
   {
     name: "Ibrahim Amoo",
-    role: "Co-Founder & CMO",
+    role: "Contributor",
     image: "/images/luckywemo.png",
     bio: "Blockchain dev | Technical Project Manager | Marketer.",
     social: {
