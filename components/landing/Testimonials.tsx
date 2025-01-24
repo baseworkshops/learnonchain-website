@@ -15,7 +15,7 @@ const testimonials = [
     quote: "The tools and courses are top-notch and easy to follow.",
     author: "Emmanuel Enebeli",
     role: "Developer Marketing",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&auto=format&fit=crop&crop=face",
+    image: "/images/kokocodes.png",
   },
   {
     quote: "I've built two dApps and earned rewards through bounties.",
