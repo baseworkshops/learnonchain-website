@@ -4,21 +4,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Bell, ArrowRight, Twitter, Github } from "lucide-react";
-import { useState } from "react";
 
 export default function ComingSoon() {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle newsletter signup
-    console.log("Email submitted:", email);
-    setEmail("");
-  };
-
-  // Countdown date (3 months from now)
-  const launchDate = new Date();
-  launchDate.setMonth(launchDate.getMonth() + 3);
 
   return (
     <main className="min-h-screen relative overflow-hidden bg-black flex items-center justify-center">
@@ -56,17 +43,7 @@ export default function ComingSoon() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-teal-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl" />
             
-            <div className="relative bg-white/5 backdrop-blur-md rounded-lg p-12 border border-white/10 group-hover:border-white/20 transition-all duration-300 text-center">
-              {/* Logo */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="text-3xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-teal-400 bg-clip-text text-transparent mb-8"
-              >
-                LearnOnchain
-              </motion.div>
-
+            <div className="relative bg-white/5 backdrop-blur-md rounded-lg p-12 border border-white/10 group-hover:border-white/20 transition-all duration-300 text-center">       
               {/* Main content */}
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -74,7 +51,7 @@ export default function ComingSoon() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-white to-gray-300 bg-clip-text text-transparent"
               >
-                Something Exciting Is Coming
+                Coming Soon ...
               </motion.h1>
 
               <motion.p
@@ -85,56 +62,6 @@ export default function ComingSoon() {
               >
                 We're building the future of onchain education. Stay tuned for updates!
               </motion.p>
-
-              {/* Newsletter signup */}
-              <motion.form
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                onSubmit={handleSubmit}
-                className="max-w-md mx-auto mb-12"
-              >
-                <div className="flex gap-4">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="bg-white/5 border-white/10 text-white"
-                    required
-                  />
-                  <Button
-                    type="submit"
-                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 group"
-                  >
-                    Notify Me
-                    <Bell className="ml-2 w-4 h-4 transition-transform group-hover:scale-110" />
-                  </Button>
-                </div>
-              </motion.form>
-
-              {/* Social links */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-                className="flex justify-center space-x-6"
-              >
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  aria-label="Follow us on Twitter"
-                >
-                  <Twitter className="w-6 h-6" />
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  aria-label="Visit our GitHub"
-                >
-                  <Github className="w-6 h-6" />
-                </a>
-              </motion.div>
 
               {/* Back to home link */}
               <motion.div

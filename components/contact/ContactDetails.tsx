@@ -7,8 +7,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "support@learnonchain.com",
-    href: "mailto:support@learnonchain.com",
+    value: "support@learnonchain.org",
+    href: "mailto:support@learnonchain.org",
     gradient: "from-purple-500 to-blue-500",
   },
   {
