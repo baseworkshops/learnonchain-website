@@ -7,9 +7,9 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote: "LearnOnchain helped me land my first blockchain job!",
-    author: "Sarah Chen",
+    author: "Defi Devrel",
     role: "Blockchain Developer",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&auto=format&fit=crop&crop=face",
+    image: "/images/defidevrel.png",
   },
   {
     quote: "The tools and courses are top-notch and easy to follow.",
@@ -19,9 +19,9 @@ const testimonials = [
   },
   {
     quote: "I've built two dApps and earned rewards through bounties.",
-    author: "Emily Johnson",
+    author: "Defi Princess",
     role: "Web3 Engineer",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&auto=format&fit=crop&crop=face",
+    image: "/images/defiprincess.png",
   },
 ];
 
