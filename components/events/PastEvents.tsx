@@ -3,25 +3,31 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const pastEvents = [
   {
     id: 1,
-    title: "ETHAccra Workshop",
+    title: "Based Africa Buildathon Workshop",
     date: "October 2024",
-    location: "Accra, Ghana",
-    description: "A hands-on workshop exploring Ethereum development and local blockchain initiatives.",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop&q=60",
+    location: "Ile Ife Osun State, Nigeria",
+    description:
+      "Our Team had a workshop at the base Ile-Ife hack day by The3rdinternet where we helped builders in getting started with OnchainKit.",
+    image:
+      "/images/based-africa-buildathon.png",
     attendees: 150,
+    link: "https://x.com/baseworkshops/status/1842936320953590229/",
   },
   {
     id: 2,
-    title: "Onchain Summer Hackathon",
-    date: "August 2024",
-    location: "Global Virtual Event",
-    description: "A global virtual hackathon bringing together developers to build innovative blockchain solutions.",
-    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&auto=format&fit=crop&q=60",
-    attendees: 500,
+    title: "Onchainkit Workshop",
+    date: "September 2024",
+    location: "Youtube & Twitter",
+    description:
+      "A workshop designed to help TypeScript & JavaScript web2 frontend developers transition Onchain.",
+    image: "/images/onchainkit-youtube.png",
+    attendees: 212,
+    link: "https://lu.ma/9jmn1o88",
   },
 ];
 
@@ -39,7 +45,9 @@ export default function PastEvents() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Our Past Events</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Our Past Events
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore the highlights from our previous events
           </p>
@@ -56,7 +64,7 @@ export default function PastEvents() {
               className="relative group"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-teal-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl" />
-              
+
               <div className="relative bg-white/5 backdrop-blur-md rounded-lg border border-white/10 group-hover:border-white/20 transition-all duration-300 overflow-hidden">
                 <div className="aspect-video relative">
                   <img
@@ -66,12 +74,12 @@ export default function PastEvents() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                     {event.title}
                   </h3>
-                  
+
                   <div className="space-y-3 mb-4">
                     <div className="flex items-center text-gray-300">
                       <Calendar className="w-5 h-5 mr-2 text-blue-400" />
@@ -85,13 +93,15 @@ export default function PastEvents() {
 
                   <p className="text-gray-300 mb-6">{event.description}</p>
 
-                  <Button
-                    variant="outline"
-                    className="w-full border-white/10 hover:border-white/20 group/button"
-                  >
-                    View Highlights
-                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover/button:translate-x-1" />
-                  </Button>
+                  <Link href={event.link} target="_blank">
+                    <Button
+                      variant="outline"
+                      className="w-full border-white/10 hover:border-white/20 group/button"
+                    >
+                      View Highlights
+                      <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover/button:translate-x-1" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
