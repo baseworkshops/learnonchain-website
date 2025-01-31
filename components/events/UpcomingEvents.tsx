@@ -28,17 +28,6 @@ const upcomingEvents = [
     capacity: "500 Participants",
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&auto=format&fit=crop&q=60",
   },
-  {
-    id: 3,
-    title: "Web3 Ladies Meetup",
-    date: "March 5, 2025",
-    time: "3:00 PM - 6:00 PM",
-    location: "Virtual",
-    description: "Network with women in Web3 and learn about the latest developments.",
-    type: "Meetup",
-    capacity: "150 Attendees",
-    image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&auto=format&fit=crop&q=60",
-  },
 ];
 
 export default function UpcomingEvents() {
